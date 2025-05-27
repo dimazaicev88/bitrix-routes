@@ -9,7 +9,7 @@ if (!function_exists('FastRoute\simpleDispatcher')) {
      *
      * @return Dispatcher
      */
-    function simpleDispatcher(callable $routeDefinitionCallback, array $options = [])
+    function simpleDispatcher(callable $routeDefinitionCallback, array $options = []): Dispatcher
     {
         $options += [
             'routeParser' => 'FastRoute\\RouteParser\\Std',
