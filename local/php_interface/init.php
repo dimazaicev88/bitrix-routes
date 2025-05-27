@@ -2,9 +2,8 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
-use FastRoute\RouteCollector;
 use FastRoute\Dispatcher;
-use Routes\Handlers\About\Guaranty;
+use FastRoute\RouteCollector;
 
 $dispatcher = FastRoute\simpleDispatcher(function (RouteCollector $r) {
     // Пример маршрутов
@@ -17,7 +16,6 @@ $dispatcher = FastRoute\simpleDispatcher(function (RouteCollector $r) {
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
 
-// Убираем query-параметры (?foo=bar)
 if (($pos = strpos($uri, '?')) !== false) {
     $uri = substr($uri, 0, $pos);
 }

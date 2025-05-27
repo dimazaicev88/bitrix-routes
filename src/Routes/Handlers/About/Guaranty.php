@@ -1,6 +1,6 @@
 <?php
 
-namespace Routes\Handlers\About;
+namespace ECommerce\Routes\Handlers\About;
 
 class Guaranty
 {
